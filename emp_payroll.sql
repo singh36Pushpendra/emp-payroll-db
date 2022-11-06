@@ -22,6 +22,14 @@ INSERT INTO employee_payroll (name, salary, start_date) VALUES ("Sanchit", 29000
 INSERT INTO employee_payroll (name, salary, start_date) VALUES ('Shubham', 35500, "2020-01-10");
 INSERT INTO employee_payroll (name, salary, start_date) VALUES ("Ajay", 17000, "2021-04-23");
 INSERT INTO employee_payroll (name, salary, start_date) VALUES ('Aniket', 45000, '2022-06-02');
+INSERT INTO employee_payroll (name, salary, start_date) VALUES ('Bill', 70000, '2018-01-01');
 
 # UC4: Retrieving all records from table.
 SELECT * FROM employee_payroll;
+
+# UC5
+# Retrieving salary based on condition.
+SELECT salary FROM employee_payroll WHERE name = 'Bill';
+
+# Retrieving employees between start dates.
+SELECT * FROM employee_payroll WHERE start_date >= '2018-01-01' and start_date <= date(now());

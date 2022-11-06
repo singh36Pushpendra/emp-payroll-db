@@ -16,3 +16,9 @@ Create Table employee_payroll (
     salary double,
     start_date date
 );
+
+# Inserting records to employee_payroll table. 
+INSERT INTO employee_payroll (name, salary, start_date) VALUES ("Sanchit", 29000, '2019-09-22');
+INSERT INTO employee_payroll (name, salary, start_date) VALUES ('Shubham', 35500, "2020-01-10");
+INSERT INTO employee_payroll (name, salary, start_date) VALUES ("Ajay", 17000, "2021-04-23");
+INSERT INTO employee_payroll (name, salary, start_date) VALUES ('Aniket', 45000, '2022-06-02');

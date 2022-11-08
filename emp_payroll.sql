@@ -87,3 +87,7 @@ ALTER TABLE employee_payroll modify dept varchar(30) not null;
 UPDATE employee_payroll SET phone = '8837287233', address = 'Aurangabad' WHERE name = 'Radhika'; 
 UPDATE employee_payroll SET phone = '9783292832', address = 'Dewas' WHERE name = 'Sanchit'; 
 UPDATE employee_payroll SET phone = '7732383923', address = 'California' WHERE name = 'Bill';
+
+# UC9
+# Adding new columns for Basic Pay, Deductions, Taxable Pay, Income Tax, Net Pay.
+ALTER TABLE employee_payroll add (basicpay float, deductions float, taxablepay float, tax float, netpay float);

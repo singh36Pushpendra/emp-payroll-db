@@ -67,3 +67,23 @@ SELECT AVG(salary) FROM employee_payroll GROUP BY gender;
 
 # Counting male and female employees.
 SELECT COUNT(gender) FROM employee_payroll GROUP BY gender;
+
+# UC8
+# Adding phone column.
+ALTER TABLE employee_payroll add phone varchar(10);
+
+# Adding address with default value, and dept columns.
+ALTER TABLE employee_payroll add (address varchar(40) DEFAULT 'My India', dept varchar(30));
+
+# Replacing with not null value in dept column.
+UPDATE employee_payroll SET dept = 'Finanace' WHERE name in ('Aniket', 'Ajay', 'Punam');
+UPDATE employee_payroll SET dept = "Sales & Marketing" WHERE name in ('Radhika', 'Shubham');
+UPDATE employee_payroll SET dept = 'Human resource' WHERE name in ('Sanchit', 'Bill');
+
+# Setting not null constraint for dept.
+ALTER TABLE employee_payroll modify dept varchar(30) not null;
+
+# Updating some values for phone and address columns.
+UPDATE employee_payroll SET phone = '8837287233', address = 'Aurangabad' WHERE name = 'Radhika'; 
+UPDATE employee_payroll SET phone = '9783292832', address = 'Dewas' WHERE name = 'Sanchit'; 
+UPDATE employee_payroll SET phone = '7732383923', address = 'California' WHERE name = 'Bill';

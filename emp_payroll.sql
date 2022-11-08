@@ -45,3 +45,25 @@ SET SQL_SAFE_UPDATES = 0;
 UPDATE employee_payroll set gender = 'M' where name = 'Ajay' or name = 'Aniket';
 
 UPDATE employee_payroll set gender = 'M' where name in ("Bill", 'Shubham', "Sanchit");
+
+# UC7
+# To view table structure.
+desc employee_payroll;
+
+INSERT INTO employee_payroll (name, salary, start_date, gender) VALUES ("Radhika", 35000, '2018-07-13', 'F');
+INSERT INTO employee_payroll (name, salary, start_date, gender) VALUES ('Punam', 70000, '2020-09-20', 'F');
+
+# To select the maximum value in column. (Male employees are more.)
+SELECT MAX(gender) FROM employee_payroll;
+
+# To select the minimum value in column. (Female employees are less.)
+SELECT MIN(gender) FROM employee_payroll;
+
+# Sum of male and female employees salaries.
+SELECT SUM(salary) FROM employee_payroll GROUP BY gender;
+
+# Average of male as well as female employees salaries.
+SELECT AVG(salary) FROM employee_payroll GROUP BY gender;
+
+# Counting male and female employees.
+SELECT COUNT(gender) FROM employee_payroll GROUP BY gender;

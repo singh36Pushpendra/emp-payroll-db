@@ -91,3 +91,7 @@ UPDATE employee_payroll SET phone = '7732383923', address = 'California' WHERE n
 # UC9
 # Adding new columns for Basic Pay, Deductions, Taxable Pay, Income Tax, Net Pay.
 ALTER TABLE employee_payroll add (basicpay float, deductions float, taxablepay float, tax float, netpay float);
+
+# UC10
+# Adding one new record for sales & marketing department.
+INSERT INTO `payroll_service`.`employee_payroll` (`name`, `salary`, `start_date`, `gender`, `phone`, `address`, `dept`) VALUES ('Terissa', '54000', '2021-08-28', 'F', '7773298233', 'Noida', 'Sales & Marketing');

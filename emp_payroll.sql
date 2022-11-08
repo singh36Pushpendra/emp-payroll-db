@@ -33,3 +33,15 @@ SELECT salary FROM employee_payroll WHERE name = 'Bill';
 
 # Retrieving employees between start dates.
 SELECT * FROM employee_payroll WHERE start_date >= '2018-01-01' and start_date <= date(now());
+
+# UC6
+# Adding new column to existing table with some data.
+Alter Table employee_payroll add gender char(1);
+
+# Disabling Safe Update mode.
+SET SQL_SAFE_UPDATES = 0;
+
+# Updating existing records, adding values for gender column.
+UPDATE employee_payroll set gender = 'M' where name = 'Ajay' or name = 'Aniket';
+
+UPDATE employee_payroll set gender = 'M' where name in ("Bill", 'Shubham', "Sanchit");
